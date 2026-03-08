@@ -1,13 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import OnboardingPage from './pages/OnboardingPage'
 
-function App() {
+const router = createBrowserRouter([
+  { path: '/', element: <OnboardingPage /> },
+  { path: '/course', element: <div>Course page coming soon</div> },
+  { path: '/story', element: <div>Story page coming soon</div> },
+])
 
-  return (
-    <>
-      <h1>Hello</h1>
-    </>
-  )
+export default function App() {
+  return <RouterProvider router={router} />
 }
 
-export default App
+
+
