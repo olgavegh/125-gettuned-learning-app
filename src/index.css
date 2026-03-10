@@ -4,18 +4,48 @@
 @import "tw-animate-css";
 
 :root {
-  --ink: #0f0e0c;
-  --paper: #f5f0e8;
-  --dark: #121110;
-  --accent: #2d5be3;
-  --accent2: #e8380d;
-  --muted: #8a8680;
-  --rule: #d4cfc6;
+  --hue: 230;
+
+  /* Color system — monochromatic + transparent technique */
+  --brand: hsl(230 65% 57%);
+  --text-strong: hsl(230 40% 17%);
+  --text-weak: hsl(230 16% 42%);
+  --stroke-strong: hsl(230 18% 58%);
+  --stroke-weak: hsl(230 28% 92%);
+  --fill: hsl(230 33% 98%);
+  --bg: hsl(230 18% 99%);
+
+  /* Transparent variants */
+  --brand-tint: hsl(230 65% 57% / 0.08);
+  --brand-ghost: hsl(230 65% 57% / 0.04);
+  --stroke-alpha: hsl(230 65% 57% / 0.12);
+
+  /* Semantic (keeps existing class names working) */
+  --ink: var(--text-strong);
+  --paper: var(--fill);
+  --overlay: var(--bg);
+  --dark: hsl(230 40% 10%);
+  --accent: var(--brand);
+  --accent2: hsl(14 88% 48%);
+  --muted: var(--text-weak);
+  --rule: var(--stroke-weak);
 }
 
 @theme inline {
+  --color-brand: var(--brand);
+  --color-text-strong: var(--text-strong);
+  --color-text-weak: var(--text-weak);
+  --color-stroke-strong: var(--stroke-strong);
+  --color-stroke-weak: var(--stroke-weak);
+  --color-fill: var(--fill);
+  --color-bg: var(--bg);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-ghost: var(--brand-ghost);
+  --color-stroke-alpha: var(--stroke-alpha);
+
   --color-ink: var(--ink);
   --color-paper: var(--paper);
+  --color-overlay: var(--overlay);
   --color-dark: var(--dark);
   --color-accent: var(--accent);
   --color-accent2: var(--accent2);
