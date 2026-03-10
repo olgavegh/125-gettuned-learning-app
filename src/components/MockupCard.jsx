@@ -4,7 +4,7 @@ export default function MockupCard({ header, badge, footer, children }) {
             {(header || badge) &&
                 <div class="px-6 py-4 border-b border-stroke-weak flex items-center justify-between gap-2">
                     {header && <div className="serif-regular text-xl text-text-strong">{header}</div>}
-                    {badge && <div className="sans-regular text-xs uppercase text-text-weak tracking-[0.15em]">{badge}</div>}
+                    {badge && <div className="font-label">{badge}</div>}
                 </div>
             }
             <div className="px-6 py-4">

@@ -11,15 +11,14 @@ export default function OnboardingPage() {
     }
 
     return (
-        <div class="bg-paper py-section-y px-section-x max-w-7xl mx-auto min-h-svh flex flex-col md:flex-row gap-l items-center pt-xxl">
-            <section class="flex flex-col gap-l flex-1">
-                <Eyebrow content="How Tuned was born" />
+        <div class="bg-paper py-section-y px-section-x  mx-auto min-h-svh flex flex-col md:flex-row gap-xxl items-center">
+            <section class="flex flex-col gap-l flex-1 max-w-7xl">
+                <Eyebrow content="Start Learning" />
                 <HeroSection
                     headline='Learning, <em class="text-accent">tuned to you.</em>'
                     paragraph="Tuned is an adaptive micro - learning platform that generates
                 a personalized course from a single prompt — and re - teaches any concept
-                you didn't get the first time. This is the story of why it exists,
-                how it was built, and what comes next." />
+                you didn't get the first time. " />
                 <div className="flex gap-3 flex-wrap">
                     <Chips content="Tuned to your level" dot="true" />
                     <Chips content="Adaptive Quizzes" />

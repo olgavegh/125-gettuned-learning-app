@@ -76,12 +76,33 @@
   --spacing-section-x: clamp(20px, 8vw, 120px);
 }
 
-.serif-regular {
-  font-family: "Instrument Serif", serif;
-  font-optical-sizing: auto;
+@layer base {
+  button,
+  label,
+  [type="radio"],
+  [type="checkbox"],
+  select {
+    cursor: pointer;
+  }
 }
 
-.sans-regular {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+@layer components {
+  .serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-optical-sizing: auto;
+  }
+
+  .sans-regular {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .font-label {
+    font-family: "DM Sans", sans-serif;
+    @apply text-xs uppercase font-medium text-stroke-strong tracking-[0.06em] group-focus-within:text-brand transition-colors duration-200;
+  }
+  .font-input {
+    font-family: "DM Sans", sans-serif;
+    @apply text-sm text-text-weak;
+  }
 }
