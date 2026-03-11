@@ -11,7 +11,7 @@
   --text-strong: hsl(230 40% 17%);
   --text-weak: hsl(230 16% 42%);
   --stroke-strong: hsl(230 18% 58%);
-  --stroke-weak: hsl(230 28% 92%);
+  --stroke-weak: hsl(230 25% 85%);
   --fill: hsl(230 33% 98%);
   --bg: hsl(230 18% 99%);
 
@@ -26,9 +26,9 @@
   --overlay: var(--bg);
   --dark: hsl(230 40% 10%);
   --accent: var(--brand);
-  --accent2: hsl(14 88% 48%);
   --muted: var(--text-weak);
   --rule: var(--stroke-weak);
+  --error: hsl(14 88% 48%);
 }
 
 @theme inline {
@@ -48,9 +48,9 @@
   --color-overlay: var(--overlay);
   --color-dark: var(--dark);
   --color-accent: var(--accent);
-  --color-accent2: var(--accent2);
   --color-muted: var(--muted);
   --color-rule: var(--rule);
+  --color-error: var(--error);
 
   --spacing-xs: clamp(6px, 1vw, 8px);
   --spacing-s: clamp(12px, 2vw, 16px);
@@ -60,6 +60,7 @@
   --spacing-xxl: clamp(60px, 8vw, 80px);
 
   /* Override built-in font sizes with fluid versions */
+  --text-xxs: clamp(8px, 1vw, 10px);
   --text-xs: clamp(10px, 1.2vw, 12px);
   --text-sm: clamp(12px, 1.5vw, 14px);
   --text-base: clamp(14px, 1.8vw, 16px);
@@ -99,10 +100,14 @@
 
   .font-label {
     font-family: "DM Sans", sans-serif;
-    @apply text-xs uppercase font-medium text-stroke-strong tracking-[0.06em] group-focus-within:text-brand transition-colors duration-200;
+    @apply text-xs uppercase font-medium text-text-weak tracking-[0.06em] group-focus-within:text-brand transition-colors duration-200;
   }
   .font-input {
     font-family: "DM Sans", sans-serif;
     @apply text-sm text-text-weak;
+  }
+  .font-hint {
+    font-family: "DM Sans", sans-serif;
+    @apply text-xxs text-stroke-strong;
   }
 }
