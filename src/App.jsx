@@ -2,11 +2,13 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import OnboardingPage from './pages/OnboardingPage'
+import CoursePage from './pages/CoursePage'
+import StoryPage from './pages/StoryPage'
 
 const router = createBrowserRouter([
   { path: '/', element: <OnboardingPage /> },
-  { path: '/course', element: <div>Course page coming soon</div> },
-  { path: '/story', element: <div>Story page coming soon</div> },
+  { path: '/course', element: <CoursePage /> },
+  { path: '/story', element: <StoryPage /> },
 ])
 
 export default function App() {
